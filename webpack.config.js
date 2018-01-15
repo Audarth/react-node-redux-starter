@@ -10,6 +10,7 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 
 module.exports = {
   entry: './src/index.jsx',
+  devtool: 'eval-source-map',
   output: {
     path: path.resolve('dist'),
     filename: 'index_bundle.js',
