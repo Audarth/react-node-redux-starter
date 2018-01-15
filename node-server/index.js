@@ -1,10 +1,13 @@
 const Koa = require('koa');
 const serve = require('koa-static');
 const send = require('koa-send');
+const compress = require('koa-compress');
 
 const app = new Koa();
 
 const router = require('koa-router')();
+
+app.use(compress());
 
 app.use(serve('./dist'));
 
